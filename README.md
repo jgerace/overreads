@@ -2,9 +2,9 @@
 
 [![Tests](https://github.com/jgerace/overreads/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/jgerace/overreads/actions/workflows/test.yml)
 
-A browser extension to display an ebook's availability from your local library's Overdrive inventory on Goodreads
+A browser extension to display an ebook's availability from your local library's Overdrive inventory on Goodreads.
 
-## What it does
+## Features
 
 On a Goodreads book page, a small widget in the left column lists each format
 (eBook, audiobook, …) your library has on OverDrive (Libby):
@@ -55,31 +55,6 @@ extension expects; run `npm test` afterwards to check everything else.
 GitHub Actions (`.github/workflows/test.yml`) runs the linters and tests on
 every pull request and every push to `main`. The badge above shows the result
 for `main`.
-
-## Project structure
-
-```
-extension/              # everything that ships in the extension
-├── manifest.json
-├── lib.js              # reads Goodreads pages, parses OverDrive results, renders rows
-├── content.js          # runs on Goodreads: storage, OverDrive request, widget
-├── badge.css           # widget styles
-├── popup.html/.js      # toolbar popup for setting the library
-└── icon48.png, icon128.png
-test/                   # node:test suites and saved pages
-docs/                   # images for this README
-scripts/
-├── refresh-fixtures.js # updates test/fixtures/ from the live sites
-└── make_icons.py       # draws the toolbar icons
-```
-
-## How it works
-
-1. `content.js` reads the book's title and author from the Goodreads page.
-2. It fetches your library's OverDrive search page for that title and author.
-3. `lib.js` pulls the `window.OverDrive.mediaItems` JSON out of that page and
-   keeps the results whose title and author match.
-4. The widget is added to the left column, one row per format.
 
 ## Known limitations
 
