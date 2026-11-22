@@ -1,0 +1,144 @@
+/* ── Goodreads × Libby — badge.css ── */
+
+#libby-badge.libby-widget {
+  margin: 16px 0;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 13px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* ── Header ── */
+
+.libby-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.libby-logo {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.libby-title {
+  font-weight: 700;
+  font-size: 13px;
+  color: #333;
+  flex: 1;
+}
+
+.libby-header-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: #00635d;
+  text-decoration: none;
+}
+
+.libby-header-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Format rows ── */
+
+.libby-formats {
+  padding: 4px 0;
+}
+
+.libby-format-row {
+  display: grid;
+  grid-template-columns: 20px 1fr auto auto;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.libby-format-row:last-child {
+  border-bottom: none;
+}
+
+.libby-format-icon {
+  font-size: 13px;
+  text-align: center;
+}
+
+.libby-format-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.libby-format-status {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.libby-format-link {
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.libby-format-link:hover {
+  opacity: 0.8;
+}
+
+/* ── Status colours ── */
+
+.libby-format-available .libby-format-status {
+  color: #1a7f37;
+}
+
+.libby-format-available .libby-format-link {
+  background: #1a7f37;
+  color: #fff;
+}
+
+.libby-format-waitlist .libby-format-status {
+  color: #b45309;
+  text-align: right;
+}
+
+/* Total copies owned, as a quieter second line under the hold count */
+.libby-format-copies {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  color: #6b7280;
+}
+
+.libby-format-waitlist .libby-format-link {
+  background: #b45309;
+  color: #fff;
+}
+
+.libby-format-unavailable .libby-format-status {
+  color: #9ca3af;
+}
+
+.libby-format-unavailable .libby-format-label {
+  color: #9ca3af;
+}
+
+/* ── Not found / loading states ── */
+
+.libby-not-found,
+.libby-loading-row {
+  padding: 10px 12px;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.libby-widget-loading {
+  opacity: 0.7;
+}

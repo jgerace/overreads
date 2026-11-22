@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Goodreads × Libby",
+  "description": "Shows OverDrive availability while browsing Goodreads",
+  "version": "1.0",
+  "permissions": ["storage", "tabs"],
+  "host_permissions": [
+    "https://www.goodreads.com/*",
+    "https://*.overdrive.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Goodreads × Libby"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.goodreads.com/*"],
+      "js": ["lib.js", "content.js"],
+      "css": ["badge.css"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "goodreads-libby@extension"
+    }
+  },
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
